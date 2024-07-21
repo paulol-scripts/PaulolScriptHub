@@ -1,0 +1,83 @@
+local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
+
+local Window = Rayfield:CreateWindow({
+    Name = "PauLoL's Script Hub",
+    LoadingTitle = "PauLoL's Scripting",
+    LoadingSubtitle = "by johnpaulo_0176 on roblox",
+    ConfigurationSaving = {
+       Enabled = true,
+       FolderName = nil, -- Create a custom folder for your hub/game
+       FileName = "Paulo"
+    },
+    Discord = {
+       Enabled = false,
+       Invite = "noinvitelink", -- The Discord invite code, do not include discord.gg/. E.g. discord.gg/ABCD would be ABCD
+       RememberJoins = true -- Set this to false to make them join the discord every time they load it up
+    },
+    KeySystem = true, -- Set this to true to use our key system
+    KeySettings = {
+       Title = "HEH",
+       Subtitle = "Key System",
+       Note = "Ask Paulo",
+       FileName = "Paulo", -- It is recommended to use something unique as other scripts using Rayfield may overwrite your key file
+       SaveKey = true, -- The user's key will be saved, but if you change the key, they will be unable to use your script
+       GrabKeyFromSite = false, -- If this is true, set Key below to the RAW site you would like Rayfield to get the key from
+       Key = {"Hello","Hi"} -- List of keys that will be accepted by the system, can be RAW file links (pastebin, github etc) or simple strings ("hello","key22")
+    }
+ })
+
+ local PlayerTab = Window:CreateTab("Player", 4483362458) -- Title, Image
+ 
+ local Button = Tab:CreateButton({
+    Name = "Legend Of Speeds Auto Steps🏃‍♂️🏃‍♀️",
+    Callback = function()
+        while wait() do
+            local args = {
+                [1] = "collectOrb",
+                [2] = "Red Orb",
+                [3] = "City"
+            }
+            
+            game:GetService("ReplicatedStorage"):WaitForChild("rEvents"):WaitForChild("orbEvent"):FireServer(unpack(args))
+        end
+
+
+
+        
+        
+    end
+
+    local Button = Tab:CreateButton({
+        Name = "Legend Of Speed Auto Gems🤑",
+        Callback = function()
+            while wait() do
+                local args = {
+                    [1] = "collectOrb",
+                    [2] = "Gem",
+                    [3] = "City"
+                }
+                
+                game:GetService("ReplicatedStorage"):WaitForChild("rEvents"):WaitForChild("orbEvent"):FireServer(unpack(args))
+            end,
+        end
+          
+     })
+
+     local Button = Tab:CreateButton({
+        Name = "Hotel Elephant Auto Money🤑",
+        Callback = function()
+            while wait() do
+                local args = {
+                    [1] = false,
+                    [2] = 69,
+                    [3] = "Cash"
+                }
+                
+                game:GetService("ReplicatedStorage"):WaitForChild("MoneyRequest"):FireServer(unpack(args))
+            end,
+        end
+          
+     })
+    
+ })
+    
