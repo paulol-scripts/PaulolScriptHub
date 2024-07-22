@@ -68,8 +68,9 @@ local Button3 = PlayerTab:CreateButton({
             game:GetService("ReplicatedStorage"):WaitForChild("MoneyRequest"):FireServer(unpack(args))
         end
     end
+})
 
-local Button3 = PlayerTab:CreateButton({
+local Button4 = PlayerTab:CreateButton({
     Name = "Legend Of Speeds Auto Rebirth🤑",
     Callback = function()
         while wait() do
