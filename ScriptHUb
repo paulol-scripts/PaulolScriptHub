@@ -68,4 +68,16 @@ local Button3 = PlayerTab:CreateButton({
             game:GetService("ReplicatedStorage"):WaitForChild("MoneyRequest"):FireServer(unpack(args))
         end
     end
+
+local Button3 = PlayerTab:CreateButton({
+    Name = "Legend Of Speeds Auto Rebirth🤑",
+    Callback = function()
+        while wait() do
+            local args = {
+                [1] = "rebirthRequest"
+            }
+
+            game:GetService("ReplicatedStorage"):WaitForChild("rEvents"):WaitForChild("rebirthEvent"):FireServer(unpack(args))
+        end
+    end
 })
